@@ -15,7 +15,7 @@ body{
 #header{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/coffee-keyboard.jpeg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://github.com/WillWard23/willward23.github.io/blob/main/images/coffee-keyboard.jpeg);
     background-size: cover;
     background-position: center;
 
@@ -278,7 +278,7 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px){
     #header{
-        background-image: url(images/Me.jpg);
+        background-image: url(https://github.com/WillWard23/willward23.github.io/blob/main/images/Hello.png);
     }
     .header-text{
         margin-top: 100%;
