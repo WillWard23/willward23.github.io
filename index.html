@@ -1,57 +1,127 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0">
-    <title>
-        William Ward - CS and AI undergraduate
-    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Ward - CS and AI Undergraduate Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/958006192e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="header">
-        <nav>
-            <a href="home.html"><img src="insert-here"></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">PROJECTS</a></li>
-                    <li><a href="">CONTACT</a></li>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Me.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Developer</p>
+                <h1>Hi, my name is<br>William Ward.</h1>
             </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <div class="text-box">
-            <h1>Lorem Ipsum</h1>
-            <p>idk what will<br>go here</p>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/Me.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Write stuff</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/Me.jpg">
+                    <div class="layer">
+                        <h3>Pastd Party App</h3>
+                        <p>Pastd is an App which I co-developed over the summer of 2022. It hosts a variety of party games available to play with your local friends.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Me.jpg">
+                    <div class="layer">
+                        <h3>Another Project 1</h3>
+                        <p>Suiiii</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/Me.jpg">
+                    <div class="layer">
+                        <h3>Another Project 2</h3>
+                        <p>Suiii</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See more</a>
+        </div>
+    </div>
+    <div id="education">
+        <div class="container">
+            <div class="education-1">
+                <h1 class="sub-title">Education</h1>
+                <p>stuff about my education</p>
+            </div>
             
         </div>
-    </section>
-<!----ABOUT---->
-<!----PROJECTS---->
-<section class="projects">
-    <h1>
-        My Projects
-    </h1>
-    <p>Here are some of the projects I have worked on</p>
-</section>
-<!----CONTACT---->
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i> will@wward.co.uk</p>
+                    <p><i class="fa-solid fa-mobile-screen-button"></i> +44 7956 946800</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/willward01/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.discordapp.com/users/WillWard#0577/"><i class="fa-brands fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Leave me a message here"></textarea>
+                        <button type="submit" class="btn btn2">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © William Ward (2023)</p>
+        </div>
+    </div>
 
-<!---JavaScript--->
 <script>
 
-    var navLinks = document.getElementById("navLinks");
-    function showMenu(){
-        navLinks.style.right = "0";
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
     }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
+
+    function closemenu(){
+        sidemenu.style.right = "-200px"
     }
+
 </script>
 </body>
 </html>
